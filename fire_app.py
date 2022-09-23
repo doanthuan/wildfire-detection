@@ -13,8 +13,6 @@ import tensorflow as tf
 app = Flask(__name__)
 
 
-
-
 app.config['UPLOAD_FOLDER'] = 'uploads'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model = load_model(os.path.join(BASE_DIR , 'models/best_model.h5'))
@@ -52,7 +50,7 @@ def predict_img(img, resize=True):
 
 @app.route('/', methods=['GET'])
 def index(name=None):
-    return render_template("upload.html")
+    return render_template("upload_fire.html")
 
 @app.route('/upload', methods=['GET','POST'])
 def upload(name=None):
@@ -81,7 +79,7 @@ def upload(name=None):
             #display result
             return render_template("result.html", filename=filename, label=label)
     else:
-        return render_template('upload.html')
+        return render_template('upload_fire.html')
 
 def parse_video(filename):
 

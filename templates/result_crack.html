@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Infinigru Crack Detection</title>
+    <title>Demo - Crack Detection</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,16 +17,11 @@
           <h2>Demo - Crack Detection</h2>
           <br/><br/><br/>
 
-        <legend>Upload Image</legend>
-        <form  action="/upload" method="post" enctype="multipart/form-data" >
-            <div class="input-group">
-              <input type="file" id="upload_file" name="upload_file" class="form-control" required>
-              <div class="input-group-btn">
-                <button class="btn btn-primary" type="submit">Upload</button>
-              </div>
-            </div>
-          </form>
-  
+          <h4>Original Image:</h4>
+          <img src="/uploads/{{filename}}" style="max-width: 500px;">
+
+          <h4>Detected:</h4>
+          <img src="/results/{{file_result}}" style="max-width: 500px;">
   
         </div>
       </div>
